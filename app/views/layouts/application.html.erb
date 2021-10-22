@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>SampleRailsBase</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<% content_for :header do %>
+  <%= render "layouts/header" %>
+<% end %>
+  
+<% content_for :hero do %>
+  <% if defined?(@is_home) && @is_home %>
+    <%= render "layouts/hero" %>
+  <% end %>
+<% end %>
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_pack_tag 'application' %>
-  </head>
+<% content_for :footer do %>
+  <%= render "layouts/footer" %>
+<% end %>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+<%= render template: "layouts/application_base" %>
