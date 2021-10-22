@@ -1,0 +1,19 @@
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center">
+      <h2><%= breadcrumbs.last[0] %></h2>
+      <ol>
+        <% breadcrumbs.each do |breadcrumb| %>
+          <% if (breadcrumb[1].nil?) %>
+            <li><%= breadcrumb[0] %></li>
+          <% else %>
+            <li><%= link_to breadcrumb[0], breadcrumb[1] %></li>
+          <% end %>
+        <% end %>
+      </ol>
+    </div>
+
+  </div>
+</section><!-- End Breadcrumbs -->

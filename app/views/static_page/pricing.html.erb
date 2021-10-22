@@ -4,20 +4,11 @@
   <% @menu = :pricing %>
 <% end %>
 
-<!-- ======= Breadcrumbs ======= -->
-<section id="breadcrumbs" class="breadcrumbs">
-  <div class="container">
-
-    <div class="d-flex justify-content-between align-items-center">
-      <h2>Pricing</h2>
-      <ol>
-        <li><a href="/">Home</a></li>
-        <li>Pricing</li>
-      </ol>
-    </div>
-
-  </div>
-</section><!-- End Breadcrumbs -->
+<% breadcrumbs = [
+     [ "Home", root_path ],
+     [ "Pricing", nil ],
+   ] %>
+<%= render "layouts/breadcrumbs", breadcrumbs: breadcrumbs %>
 
 <!-- ======= Pricing Section ======= -->
 <section id="pricing" class="pricing">
