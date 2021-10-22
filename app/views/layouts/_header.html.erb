@@ -8,13 +8,13 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a href="/" class="active">Home</a></li>
+        <li><%= link_to "Home", root_path, class: @menu == :home ? "active" : nil %></li>
 
         <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="about">About</a></li>
-            <li><a href="team">Team</a></li>
-            <li><a href="testimonials">Testimonials</a></li>
+            <li><%= link_to "About", about_path, class: @menu == :about ? "active" : nil %></li>
+            <li><%= link_to "Team", team_path, class: @menu == :team ? "active" : nil %></li>
+            <li><%= link_to "Testimonials", testimonials_path, class: @menu == :testimonials ? "active" : nil %></li>
 
             <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
               <ul>
@@ -27,12 +27,12 @@
             </li>
           </ul>
         </li>
-        <li><a href="services">Services</a></li>
-        <li><a href="portfolio">Portfolio</a></li>
-        <li><a href="pricing">Pricing</a></li>
-        <li><a href="blog">Blog</a></li>
+        <li><%= link_to "Services", services_path, class: @menu == :services ? "active" : nil %></li>
+        <li><%= link_to "Portfolio", portfolio_path, class: @menu == :portfolio ? "active" : nil %></li>
+        <li><%= link_to "Pricing", pricing_path, class: @menu == :pricing ? "active" : nil %></li>
+        <li><%= link_to "Blog", blog_path, class: @menu == :blog ? "active" : nil %></li>
 
-        <li><a href="contact">Contact</a></li>
+        <li><%= link_to "Contact", contact_path, class: @menu == :contact ? "active" : nil %></li>
         <li><a href="/" class="getstarted">Get Started</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
